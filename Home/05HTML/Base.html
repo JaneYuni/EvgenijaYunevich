@@ -6,10 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Forms</title>
+    <style>
+        table {width: 700px;}
+    </style>
 </head>
 <body>
-<table style="width: 700px" valign="top">
-    <tr>
+<table>
+    <tr style="vertical-align: top">
         <td>
             <p><b>Простая форма поиска с вариантами:</b></p>
             <form action="http://fe.it-academy.by/TestForm.php" name="found" method="get">
@@ -23,7 +26,7 @@
                         <p><input type="radio" name="radio" value="radio1"><a>на сайте</a>
                             <input type="radio" name="radio" value="radio2"><a>в google</a></p>
                     </label>
-                    <p><i>Длина запроса не более 10 символов</i></p>
+                    <a><i>Длина запроса не более 10 символов</i></a>
                 </fieldset>
             </form>
         </td>
@@ -40,12 +43,12 @@
                         <p><input type="radio" name="radio" value="radio1"><a>на сайте</a>
                             <input type="radio" name="radio" value="radio2"><a>в google</a></p>
                     </label>
-                    <p><i><sup>&#8270</sup> - обязательное поле</i></p>
+                    <a><i><sup>&#8270</sup> - обязательное поле</i></a>
                 </fieldset>
             </form>
         </td>
     </tr>
-    <tr>
+    <tr style="vertical-align: top">
         <td>
             <p><b>Простая форма авторизации:</b></p>
             <form action="http://fe.it-academy.by/TestForm.php" name="authorization" method="get">
@@ -61,7 +64,7 @@
                         <input type="checkbox" name="check"> <a>Оставаться в системе</a>
                     </label>
                     <p><input type="submit" value="Войти"></p>
-                    <p><i><sup>&#8270</sup> - обязательное поле</i></p>
+                    <a><i><sup>&#8270</sup> - обязательное поле</i></a>
                 </fieldset>
             </form>
         </td>
@@ -90,7 +93,7 @@
             </form>
         </td>
     </tr>
-    <tr>
+    <tr style="vertical-align: top">
         <td>
             <p><b>Отзыв:</b></p>
             <form action="http://fe.it-academy.by/TestForm.php" name="review" method="post">
@@ -108,7 +111,7 @@
                     </textarea>
                     </label>
                     <p><input type="submit" value="Отправить"></p>
-                    <p><i><sup>&#8270</sup> - обязательное поле</i></p>
+                    <i><sup>&#8270</sup> - обязательное поле</i>
                 </fieldset>
             </form>
         </td>
@@ -141,7 +144,7 @@
             </form>
         </td>
     </tr>
-    <tr>
+    <tr style="vertical-align: top">
         <td>
             <p><b>Загрузка файла на сервер:</b></p>
             <form action="http://fe.it-academy.by/TestForm.php" name="loading" method="post"
@@ -166,13 +169,13 @@
                     <label for="ru">
                         <input type="text" placeholder="Только русские буквы" id="ru" name="ru" pattern="[А-Яа-я]+">
                     </label>
-                    <p><i>Телефонный номер в формате</i></p>
-                    <p><i>+XXX-XX-XXXXXXX, где Х - любое число</i></p>
+                    <p><i>Телефонный номер в формате</i><br>
+                    <i>+XXX-XX-XXXXXXX, где Х - любое число</i></p>
                     <label for="num">
-                        <input type="text" id="num" name="num" maxlength="15"
-                               pattern="(\+)?(375)?(\s|\(|\-)?((2|3|4)(3|4|5|9))(\s|\)|\-)?\d{3,7}((\s|\)?\d{2,4}(\s|\)?\d{2})(;|:|\s+|\|)\w+">
+                        <p><input type="tel" id="num" name="num"
+                               pattern="\+[0-9]{3}-[0-9]{2}-[0-9]{7}"></p>
                     </label>
-                    <p><input type="submit" value="Проверить"></p>
+                    <input type="submit" value="Проверить">
                 </fieldset>
             </form>
         </td>
