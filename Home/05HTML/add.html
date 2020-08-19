@@ -6,12 +6,22 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form</title>
+    <style>
+
+        body{
+            width: 850px;
+        }
+        img {
+            width: 31px;
+            height: 31px;
+        }
+    </style>
 </head>
-<body style="width: 850px">
+<body >
 <div style="text-align: center">
     <h1>Заполните анкету</h1>
 </div>
-<table style="width: 850px">
+<table>
     <tr>
         <td>
             <form action="http://fe.it-academy.by/TestForm.php" name="personal" method="get">
@@ -34,7 +44,7 @@
                                required>
                         <a>Только кириллица, без пробелов, длина поля 24, обязательное поле</a><br>
                     </label>
-                    <table style="width: 830px">
+                    <table >
                         <tr>
                             <td>
                                 <form action="http://fe.it-academy.by/TestForm.php" name="passport" method="get">
@@ -48,8 +58,8 @@
                                                 Номер паспорта &#8211 только цифры с длиной 7 и максимальным количеством
                                                 7,
                                                 количество цифр не менее 7, обязательное поле<br></a>
-                                            <input type="text" name="ser" maxlength="2" pattern="[A-Z]{,2}" required>
-                                            <input type="text" name="number" maxlength="7" pattern="[0-9]{,7}" required>
+                                            <input type="text" name="ser" maxlength="2" pattern="[A-Z]{2}" required>
+                                            <input type="text" name="number" maxlength="7" pattern="[0-9]{7}" required>
                                         </label>
                                     </fieldset>
                                 </form>
@@ -82,7 +92,7 @@
                                             <a>Месяц рождения</a><br>
                                         </label>
                                         <label>
-                                            <input type="number" name="date1" maxlength="2" pattern="[1-31]" step="1">
+                                            <input type="number" name="date1" maxlength="2" min="1" max="31" step="1">
                                             <a>Диапазон от 1 до 31, с шагом 1</a><br>
                                         </label>
                                     </fieldset>
@@ -115,7 +125,7 @@
             <form action="http://fe.it-academy.by/TestForm.php" name="hobby" method="get">
                 <fieldset>
                     <legend>Интересы</legend>
-                    <table style="width: 830px">
+                    <table style="width: 810px">
                         <tr>
                             <td>
                                 <form action="http://fe.it-academy.by/TestForm.php" name="hobby1" method="get">
@@ -175,11 +185,12 @@
     <fieldset>
         <legend>Данные для входа и восстановления пароля</legend>
         <label>
-            <input type="text" name="log" pattern="[A-Za-z]{5,}+\S" maxlength="20" placeholder="Логин" required>
+            <input type="text" name="log" min="5" max="20" pattern="[A-Za-z]+\S"
+                   placeholder="Логин" required>
             <a>Только латиница, без пробелов, не менее 5 символов, длина поля 20, обязательное поле</a><br>
         </label>
         <label>
-            <input type="password" autocomplete="off" name="pass" maxlength="20" pattern="[A-Za-z]{10,}+\S"
+            <input type="password" autocomplete="off" name="pass" min="10" maxlength="20" pattern="[А-Яа-я]+\S"
                    placeholder="Пароль" required>
             <a>Только кириллица, без пробелов, не менее 10 символов, длина поля 20, обязательное поле,
                 отключить автозаполнение</a><br>
@@ -190,10 +201,12 @@
     <fieldset>
         <legend>Координаты&colon;</legend>
         <label>
-            <input type="email" name="mail" placeholder="введите адрес почты"><br>
+            <input type="email" name="mail" placeholder="введите адрес почты" pattern="^.+@.+\..+$">
+            <a>проверка должна осуществляться при помощи новых атрибутов тега &lsaquo;input&rsaquo;</a><br>
         </label>
         <label>
-            <input type="url" name="url" placeholder="введите адрес сайта" pattern="https?://.+"><br>
+            <input type="url" name="url" placeholder="введите адрес сайта" pattern="https?://.+">
+            <a>проверка должна осуществляться при помощи новых атрибутов тега &lsaquo;input&rsaquo;</a><br>
         </label>
     </fieldset>
 </form>
@@ -201,10 +214,12 @@
     <fieldset>
         <legend>Цифры</legend>
         <label>
-            <input type="number" name="digit1"><br>
+            <input type="number" name="digit1" min="-2.5" max="2.5" step="0.1">
+            <a>Диапазон от -2.5 до 2.5 с шагом 0.1</a><br>
         </label>
         <label>
-            <input type="range" name="range" min="1" max="10"><br>
+            <input type="range" name="range" min="1" max="10" value="5">
+            <a>Максимальное 10 минимальное 1</a><br>
         </label>
     </fieldset>
 </form>
@@ -215,10 +230,10 @@
             <input type="submit" name="keys1" value="Отправить">
         </label>
         <label>
-            <input type="submit" name="keys2" value="Сбросить"><br>
+            <input type="reset" name="keys2" value="Сбросить"><br>
         </label>
         <label>
-            <input type="button" src="mail.png" height="48" width="48">
+            <input type="image" alt="" src="mail.png" style="width: 31px" disabled>
         </label>
     </fieldset>
 </form>
