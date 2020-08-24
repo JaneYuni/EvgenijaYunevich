@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .block {
+            background-color: black;
+            color: green;
+            width: 400px;
+            height: 100%;
+            max-height: 75px;
+            overflow: auto;
+        }
+        .list{
+            width: 350px;
+            margin-block-start: 1px;
+        }
+        .big {
+            list-style-type: upper-roman;
+        }
+        .small{
+            list-style-type: lower-roman;
+        }
+    </style>
+</head>
+<body>
+<div class="block">
+<ul class="list">
+    <li class="big"><b>Контейнер с кодом</b>
+        <ul>
+            <li class="small">Цвет фона&#58; чёрный</li>
+            <li class="small">Цвет текста&#58; зелёный </li>
+            <li class="small">Ширина&#58; 400px</li>
+            <li class="small">Максимальная высота контейнера&#58; 4&#150;е строки</li>
+            <li class="small">Переполнение&#58; автоматическое</li>
+        </ul>
+    </li>
+    <li class="big"><b>Список</b>
+        <ul>
+            <li class="small">Ширина&#58; 350px</li>
+            <li class="small">Тип списка&#58; римские цифры</li>
+            <li class="small">Тип вложенного списка&#58; римские нижний регистр цифры</li>
+        </ul>
+    </li>
+</ul>
+</div>
+</body>
+</html>
