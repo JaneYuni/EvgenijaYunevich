@@ -10,9 +10,15 @@ ul{
     background-color: lawngreen;
     float: left;
 }
+.navigation h2{
+    margin-top: 0;
+}
 .block{
     background-color: lemonchiffon;
     margin-bottom: 2em;
+}
+.block h2{
+    margin-top: 0;
 }
 .footer{
     background-color: #ffa6ff;;
