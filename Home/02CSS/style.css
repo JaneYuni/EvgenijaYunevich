@@ -1,0 +1,22 @@
+.m{
+    position: relative;
+    margin: 0 0 0 90%;
+}
+ul{
+    list-style: disc;
+}
+.navigation{
+    width: 15em;
+    background-color: lawngreen;
+    float: left;
+}
+.block{
+    background-color: lemonchiffon;
+    margin-bottom: 2em;
+}
+.footer{
+    background-color: #ffa6ff;;
+    height: inherit;
+    width: inherit;
+    clear: both;
+}
